@@ -3,7 +3,7 @@ import store from '../store'
 
 export function request (config) {
   const instance = axios.create({
-    baseURL: 'http://localhost:8181',
+    baseURL: process.env.VUE_APP_BASE_API,
     timeout: 5000
   })
 

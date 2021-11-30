@@ -22,7 +22,7 @@
         ></el-cascader>
       </el-form-item>
 
-      <img-upload></img-upload>
+      <img-upload class="img_upload"></img-upload>
     </el-form>
     <div slot="footer" class="dialog-footer">
       <el-button @click="isDialogFormVisible">取 消</el-button>
@@ -49,52 +49,70 @@ export default {
       dialog: false,
       // 分类
       value: '',
-      options: [{
-        value: 'zhinan',
-        label: '指南',
-        children: [{
-          value: 'shejiyuanze',
-          label: '设计原则'
-        }, {
-          value: 'daohang',
-          label: '导航'
-        }]
-      }, {
-        value: 'zujian',
-        label: '组件',
-        children: [{
-          value: 'basic',
-          label: 'Basic'
-        }, {
-          value: 'form',
-          label: 'Form'
-        }, {
-          value: 'data',
-          label: 'Data'
-        }, {
-          value: 'notice',
-          label: 'Notice'
-        }, {
-          value: 'navigation',
-          label: 'Navigation'
-        }, {
-          value: 'others',
-          label: 'Others'
-        }]
-      }, {
-        value: 'ziyuan',
-        label: '资源',
-        children: [{
-          value: 'axure',
-          label: 'Axure Components'
-        }, {
-          value: 'sketch',
-          label: 'Sketch Templates'
-        }, {
-          value: 'jiaohu',
-          label: '组件交互文档'
-        }]
-      }],
+      options: [
+        {
+          value: 'zhinan',
+          label: '指南',
+          children: [
+            {
+              value: 'shejiyuanze',
+              label: '设计原则'
+            },
+            {
+              value: 'daohang',
+              label: '导航'
+            }
+          ]
+        },
+        {
+          value: 'zujian',
+          label: '组件',
+          children: [
+            {
+              value: 'basic',
+              label: 'Basic'
+            },
+            {
+              value: 'form',
+              label: 'Form'
+            },
+            {
+              value: 'data',
+              label: 'Data'
+            },
+            {
+              value: 'notice',
+              label: 'Notice'
+            },
+            {
+              value: 'navigation',
+              label: 'Navigation'
+            },
+            {
+              value: 'others',
+              label: 'Others'
+            }
+          ]
+        },
+        {
+          value: 'ziyuan',
+          label: '资源',
+          children: [
+            {
+              value: 'axure',
+              label: 'Axure Components'
+            },
+            {
+              value: 'sketch',
+              label: 'Sketch Templates'
+            },
+            {
+              value: 'jiaohu',
+              label: '组件交互文档'
+            }
+          ]
+        }
+      ],
       // 选中的商品
       form: {
         id: '',
@@ -131,4 +149,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="less" scoped>
+.img_upload {
+  margin-left: 50px;
+}
+</style>

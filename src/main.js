@@ -22,6 +22,7 @@ router.beforeEach((to, from, next) => {
   if (to.meta.Authority) {
     if (getLocalStorage('JwtToken') !== '') {
       NProgress.start()
+      document.title = to.meta.title
       next()
     } else {
       next({ path: '/login' })

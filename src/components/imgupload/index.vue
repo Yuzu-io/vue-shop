@@ -65,8 +65,4 @@ export default {
     height: 150px;
     display: block;
   }
-
-  .img_upload{
-    margin-left: 50px;
-  }
 </style>
